@@ -37,9 +37,16 @@ function getWeatherInfo(geolocation, onSuccess, onError, useCelsius = true) {
         }).catch((err) => onError(err));
 }
 
+const searchBarEl = document.getElementById("search-bar");
+const temperatureEl = document.getElementById("current-weather");
+const weatherDescriptionEl = document.getElementById("weather-description");
 
-
-// TESTING
-getLatitudeLongitude("mexico", function(geolocation) {
-    getWeatherInfo(geolocation, console.log);
+searchBarEl.addEventListener("change", function() {
+    getLatitudeLongitude(this.value, function(geolocation) {
+        getWeatherInfo(geolocation, function(data) {
+            searchBarEl.value = data.city;
+            temperatureEl.innerText = `Temperature: ${data.temp}°C`;
+            weatherDescriptionEl.innerText = `Weather: ${data.description}`;
+        });
+    });
 });
