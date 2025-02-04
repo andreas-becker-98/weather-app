@@ -4,11 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-
     <link rel="stylesheet" href="style.css">
+    <style>
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+ header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            background-color: #007BFF;
+            color: white;
+        }
+    #logo {
+            width: 50px;
+            height: 50px;
+        }
+#search-bar {
+            width: 300px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+        }
+#banner {
+            background-color: #007BFF;
+            color: white;
+            padding: 50px;
+            text-align: center;
+            width: 100%;
+        }
+#carousel {
+            display: flex;
+            overflow-x: scroll;
+            padding: 20px;
+            background-color: white;
+            width: 100%;
+        }
+.carousel-item {
+            flex: 0 0 20%;
+            margin-right: 20px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <img id="logo" src="logo.png" alt="Logo">
+        <input type="text" id="search-bar" placeholder="Enter city name">
+    </header>
+    <div id="banner">
+        <h2>Current Weather</h2>
+        <p id="current-weather">Temperature: --°C</p>
+        <p id="weather-description">Weather: --</p>
+    </div>
+    <div id="carousel">
+        <div class="carousel-item">
+            <h3>Day 1</h3>
+            <p>Temperature: --°C</p>
+            <p>Weather: --</p>
+        </div>
+        <div class="carousel-item">
+            <h3>Day 2</h3>
+            <p>Temperature: --°C</p>
+            <p>Weather: --</p>
+        </div>
+        <div class="carousel-item">
+            <h3>Day 3</h3>
+            <p>Temperature: --°C</p>
+            <p>Weather: --</p>
+        </div>
+        <div class="carousel-item">
+            <h3>Day 4</h3>
+            <p>Temperature: --°C</p>
+            <p>Weather: --</p>
+        </div>
+        <div class="carousel-item">
+            <h3>Day 5</h3>
+            <p>Temperature: --°C</p>
+            <p>Weather: --</p>
+        </div>
+    </div>
+    <footer style="padding: 20px; background-color: #007BFF; color: white; text-align: center; width: 100%;">
+        &copy; 2025 Weather App. All rights reserved.
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
