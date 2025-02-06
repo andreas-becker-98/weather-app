@@ -46,10 +46,9 @@ header {
 
 #carousel {
     display: flex;
-    align-items: center;
     overflow-x: auto;
     gap: 100px;
-    padding: 50px;
+    padding: 20px;
     background-color:  rgb(26, 75, 136);
 }
 
@@ -64,72 +63,18 @@ header {
     min-width: 200px;
 }
 
-.carousel-item:hover{
-    animation-name: stretch;
-    animation-duration: 3.5s; 
-    animation-timing-function: ease-out; 
-    animation-delay: 0.2s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-fill-mode: none;
-    animation-play-state: running; 
+
+
+
+.error-banner {
+    display: none;
+    background-color: red;
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
 }
-
-@keyframes stretch {
-    0% {
-      transform: scale(1);
-      /* background-color: #04AA6D; */
-      border-radius: 0%;
-    }
-    50% {
-      /* background-color: #97aa04; */
-      border-radius: 50%;
-    }
-    100% {
-      transform: scale(1.5);
-      /* background-color: #aa0404; */
-      border-radius: 100%;
-    }
-  }
-
-  /* Media queries for responsiveness */
-@media screen and (max-width: 700px) {
-
-    
-    #carousel {
-        flex-direction: column;
-    }
-
-}
-
-@media screen and (max-width: 300px) {
-
-    
-    #carousel {
-        flex-direction: row;
-        width: 300px;
-        
-    }
-
-
-
-}
-
-
-
-
-/* @media (max-width: 600px) {
-
-    
-    .desktop-menu {
-        display: none;
-    }
-
-    .mobile-menu {
-        display: block;
-    }
-
-    body {
-        background-color: #e0f7fa;
-    }
-} */
