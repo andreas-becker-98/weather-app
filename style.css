@@ -43,19 +43,22 @@ header {
     text-align: center;
     width: 100%;
 }
+
 #carousel {
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
+    gap: 100px;
     padding: 20px;
-    background-color: rgba(31, 71, 123, 1);
-    width: 100%;
+    background-color:  rgb(26, 75, 136);
 }
+
 .carousel-item {
-    flex: 0 0 20%;
-    margin-right: 20px;
-    background-color: rgb(79, 110, 154);
-    color: white;
-    padding: 20px;
+    flex: 0 0 auto;
+    background-color: rgb(65, 115, 161);
+    padding: 5px;
     border-radius: 5px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    min-width: 200px;
 }
