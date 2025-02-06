@@ -8,6 +8,12 @@ body {
     align-items: center;
 }
 header {
+
+    background-image: url('banner2.png');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            
     display: flex;
     justify-content: space-between;
     align-items: center;
