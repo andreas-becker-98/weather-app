@@ -23,11 +23,11 @@ header {
     color: white;
 }
 #logo {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     border: 2px solid;
-    border-color: gray
+    border-color: rgba(128, 128, 128, 0)
 }
 #search-bar {
     width: 300px;
