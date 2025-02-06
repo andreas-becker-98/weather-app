@@ -1,3 +1,5 @@
+*{box-sizing: border-box;}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -6,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 header {
 
@@ -50,6 +53,7 @@ header {
     overflow-x: auto;
     gap: 100px;
     padding: 50px;
+    width: 100%;
     background-color:  rgb(26, 75, 136);
 }
 
