@@ -64,6 +64,8 @@ function displayFiveDayForecast(placeName, onError, useCelsius = true) {
         });
 }
 
+const errorBanner = document.getElementById("error-banner");
+
 const searchBarEl = document.getElementById("search-bar");
 const temperatureEl = document.getElementById("current-weather");
 const weatherDescriptionEl = document.getElementById("weather-description");
@@ -106,10 +108,29 @@ searchBarEl.addEventListener("change", function() {
     }, function(err) {
         temperatureEl.innerText = `--°C`;
         weatherDescriptionEl.innerText = `--`;
-        window.alert(err);
+        
+        errorBanner.style.display = 'block';
+        errorBanner.innerText = `Error: ${err}`;
+
     },);
     displayFiveDayForecast(this.value);
 });
 
 // Hide the carousel on page load
 carouselEl.style.visibility = "hidden";
+
+
+
+
+window.onerror = function(message, source, lineno, colno, error) {
+    errorBanner.style.display = 'block';
+    errorBanner.textContent = `Error: ${message} at ${source}:${lineno}:${colno}`;
+    return true; 
+};
+function closeErrorBanner() {
+    errorBanner.style.display = 'none';
+};
+
+errorBanner.addEventListener("click", closeErrorBanner);
+
+
